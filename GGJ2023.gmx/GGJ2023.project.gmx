@@ -7,6 +7,9 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_goal</sprite>
+    <sprite>sprites\spr_goal2</sprite>
+    <sprite>sprites\spr_player2</sprite>
     <sprite>sprites\spr_wall_horizontal</sprite>
     <sprite>sprites\spr_wall_vertical</sprite>
   </sprites>
@@ -14,11 +17,18 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_player2</object>
     <object>objects\obj_wall_horizontal</object>
     <object>objects\obj_wall_vertical</object>
+    <object>objects\obj_goal</object>
+    <object>objects\obj_goal2</object>
+    <object>objects\obj_menu</object>
+    <object>objects\obj_level_select</object>
+    <object>objects\obj_mouse</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_title</room>
+    <room>rooms\rm_level1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
