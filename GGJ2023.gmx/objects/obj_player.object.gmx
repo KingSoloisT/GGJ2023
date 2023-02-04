@@ -102,15 +102,23 @@ if (device_get_tilt_y() &gt; 0)
     LeftDirection = false;
     RightDirection = true;
 }
+
+/*DEBUGINFO
 show_debug_message("Down = " + string(DownSpeed) + "Up = " + string(UpSpeed) + "Left = " + string(LeftSpeed) + "Right = " + string(RightSpeed));
 show_debug_message("Down = " + string(DownDirection) + "Up = " + string(UpDirection) + "Left = " + string(LeftDirection) + "Right = " + string(RightDirection));
-
+*/
 
 if (DownDirection)
 {
 
     //reset movement speed to allow to turn the other direction off a wall.
     UpMovementSpeed = movementspeed;
+    
+    if (place_free(x,y + movementspeed))
+    {
+        //reset movement speed if the space is clear.
+        DownMovementSpeed = movementspeed;
+    }
     
     if (place_free(x,y + DownSpeed * DownMovementSpeed))
     {
@@ -120,12 +128,20 @@ if (DownDirection)
     {
         DownMovementSpeed = SlowDown(DownMovementSpeed);
     }
+    
+    
 }
 if (UpDirection)
 {
     
     //reset movement speed to allow to turn the other direction off a wall.
     DownMovementSpeed = movementspeed;
+    
+    if (place_free(x,y - movementspeed))
+    {
+        //reset movement speed if the space is clear.
+        UpMovementSpeed = movementspeed;
+    }
     
     if (place_free(x,y + UpSpeed * UpMovementSpeed))
     {
@@ -141,6 +157,12 @@ if (LeftDirection)
     //reset movement speed to allow to turn the other direction off a wall.
     RightMovementSpeed = movementspeed;
     
+    if (place_free(x - movementspeed, y))
+    {
+        //reset movement speed if the space is clear.
+        LeftMovementSpeed = movementspeed;
+    }
+    
     if (place_free(x + LeftSpeed * LeftMovementSpeed,y))
     {
         x += LeftSpeed * LeftMovementSpeed;
@@ -154,6 +176,12 @@ if (RightDirection)
 {
     //reset movement speed to allow to turn the other direction off a wall.
     LeftMovementSpeed = movementspeed;
+    
+    if (place_free(x + movementspeed, y))
+    {
+        //reset movement speed if the space is clear.
+        RightMovementSpeed = movementspeed;
+    }
     
     if (place_free(x + RightSpeed * RightMovementSpeed,y))
     {

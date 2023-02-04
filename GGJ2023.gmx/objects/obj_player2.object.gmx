@@ -26,6 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>movementspeed = 25;
+
+UpSpeed = 0;
+DownSpeed = 0;
+LeftSpeed = 0;
+RightSpeed = 0;
+
+DownMovementSpeed = movementspeed;
+UpMovementSpeed = movementspeed;
+LeftMovementSpeed = movementspeed;
+RightMovementSpeed = movementspeed;
 </string>
           </argument>
         </arguments>
@@ -52,6 +62,41 @@
 //device_get_tilt_y()
 //device_get_tilt_z()
 
+
+
+
+//DOWN
+if (device_get_tilt_x() &gt; 0)
+{
+    //DownSpeed = device_get_tilt_x() * movementspeed; //Hopefully don't need to go back to this working speed way
+    DownSpeed = device_get_tilt_x();
+    DownDirection = true;
+    UpDirection = false;
+}
+//UP
+if (device_get_tilt_x() &lt; 0)
+{
+    UpSpeed = device_get_tilt_x();
+    DownDirection = false;
+    UpDirection = true;
+}
+//LEFT
+if (device_get_tilt_y() &lt; 0)
+{
+    LeftSpeed = device_get_tilt_y();
+    LeftDirection = true;
+    RightDirection = false;
+}
+//RIGHT
+if (device_get_tilt_y() &gt; 0)
+{
+    RightSpeed = device_get_tilt_y();
+    LeftDirection = false;
+    RightDirection = true;
+}
+
+
+
 x = clamp(x, sprite_width, room_width - sprite_width);
 y = clamp(y, sprite_height, room_height - sprite_height);
 
@@ -62,24 +107,36 @@ if place_meeting(x,y,obj_goal2)
 }
 
 
-
+/*
 if place_meeting(x,y,obj_wall_horizontal)
 {
-    x += device_get_tilt_y()*movementspeed;
+    x += device_get_tilt_y()* movementspeed;
 }
 
 if place_meeting(x,y,obj_wall_vertical)
 {
-    y += device_get_tilt_x()*movementspeed; 
+    y += device_get_tilt_x()* movementspeed; 
 }
+*/
 
 
-
-/*
 if (DownDirection)
 {
 
+    //if (place_meeting(x,y,obj_wall_horizontal))
+    //{
+        //x += device_get_tilt_y()* movementspeed;
+    //}
+    
+    if (place_meeting(x,y + DownSpeed * DownMovementSpeed, obj_wall_vertical))
+    {
+        y += DownSpeed * DownMovementSpeed;
+    }
+    
+    
+    
     //reset movement speed to allow to turn the other direction off a wall.
+    /*
     UpMovementSpeed = movementspeed;
     
     if (place_free(x,y + DownSpeed * DownMovementSpeed))
@@ -90,10 +147,19 @@ if (DownDirection)
     {
         DownMovementSpeed = SlowDown(DownMovementSpeed);
     }
+    */
 }
+
+
 if (UpDirection)
 {
-    
+
+    if (place_meeting(x,y + UpSpeed * UpMovementSpeed, obj_wall_vertical))
+    {
+        y += UpSpeed * UpMovementSpeed;
+    }
+
+    /*
     //reset movement speed to allow to turn the other direction off a wall.
     DownMovementSpeed = movementspeed;
     
@@ -105,9 +171,18 @@ if (UpDirection)
     {
         UpMovementSpeed = SlowDown(UpMovementSpeed);
     }
-} 
+    */
+}
+
 if (LeftDirection)
 {
+
+    if (place_meeting(x + LeftSpeed * LeftMovementSpeed,y, obj_wall_horizontal))
+    {
+        x += LeftSpeed * LeftMovementSpeed;
+    }
+
+    /*
     //reset movement speed to allow to turn the other direction off a wall.
     RightMovementSpeed = movementspeed;
     
@@ -119,9 +194,18 @@ if (LeftDirection)
     {
         LeftMovementSpeed = SlowDown(LeftMovementSpeed);
     }
+    */
 }
+
 if (RightDirection)
 {
+
+    if (place_meeting(x + RightSpeed * RightMovementSpeed,y, obj_wall_horizontal))
+    {
+        x += RightSpeed * RightMovementSpeed;
+    }
+
+/*
     //reset movement speed to allow to turn the other direction off a wall.
     LeftMovementSpeed = movementspeed;
     
@@ -133,8 +217,9 @@ if (RightDirection)
     {
         RightMovementSpeed = SlowDown(RightMovementSpeed);
     }
+    */
 }
-*/
+
 
 
 </string>
