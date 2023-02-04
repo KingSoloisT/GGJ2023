@@ -3,23 +3,23 @@
   <type>0</type>
   <xorig>15</xorig>
   <yorigin>15</yorigin>
-  <colkind>1</colkind>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>0</sepmasks>
+  <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>31</bbox_left>
-  <bbox_right>770</bbox_right>
-  <bbox_top>50</bbox_top>
-  <bbox_bottom>417</bbox_bottom>
+  <bbox_left>80</bbox_left>
+  <bbox_right>564</bbox_right>
+  <bbox_top>472</bbox_top>
+  <bbox_bottom>657</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>824</width>
-  <height>946</height>
+  <width>678</width>
+  <height>704</height>
   <frames>
-    <frame index="0">images\spr_player2_0.png</frame>
+    <frame index="0">images\spr_goal_hole_0.png</frame>
   </frames>
 </sprite>
