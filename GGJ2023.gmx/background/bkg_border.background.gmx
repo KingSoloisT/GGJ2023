@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>1728</width>
-  <height>972</height>
-  <data>images\Top_Down.png</data>
+  <width>1920</width>
+  <height>1080</height>
+  <data>images\bkg_border.png</data>
 </background>

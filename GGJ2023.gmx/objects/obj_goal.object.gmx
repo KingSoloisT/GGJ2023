@@ -51,11 +51,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if device_get_tilt_y() &gt;= -0.25
+            <string>/*
+
+if obj_player.UpDirection = true
+{
+    background_index[1] = X_Rot_25;
+}
+
+if obj_player.DownDirection = true
+{
+    background_index[1] = X_Rot__25;
+}
+
+if obj_player.LeftDirection = true
 {
     background_index[1] = Y_Rot_25;
 }
-device_get_tilt_x()
+
+if obj_player.RightDirection = true
+{
+    background_index[1] = Y_Rot__25;
+}
 </string>
           </argument>
         </arguments>
