@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>movementspeed = 30;
+UpSpeed = 0;
+DownSpeed = 0;
+LeftSpeed = 0;
+RightSpeed = 0;
 </string>
           </argument>
         </arguments>
@@ -51,11 +55,22 @@
             <string>//device_get_tilt_x()
 //device_get_tilt_y()
 //device_get_tilt_z()
+
 x = clamp(x,0,room_width);
 y = clamp(y,0,room_height);
 
-obj_player.x += device_get_tilt_y()*movementspeed;
-obj_player.y += device_get_tilt_x()*movementspeed;
+//if (place_meeting(x, y, obj_wall_vertical) || place_meeting(x, y, obj_wall_horizontal))
+//{
+//    place_free(x, y);
+//}
+
+//if (place_free(x + sprite_width / 2, y + sprite_height / 2))
+//{
+//    movementspeed;
+//}
+
+x += device_get_tilt_y()* movementspeed;
+y += device_get_tilt_x()* movementspeed;
 
 if place_meeting(x,y,obj_goal)
 {
@@ -63,6 +78,50 @@ if place_meeting(x,y,obj_goal)
 }
 
 //-1 to 1
+
+
+
+//DOWN
+if (device_get_tilt_x() &gt; 0)
+{
+    DownSpeed = device_get_tilt_x();
+}
+//UP
+if (device_get_tilt_x() &lt; 0)
+{
+    UpSpeed = device_get_tilt_x();
+}
+//LEFT
+if (device_get_tilt_y() &lt; 0)
+{
+    LeftSpeed = device_get_tilt_y();
+}
+//RIGHT
+if (device_get_tilt_y() &gt; 0)
+{
+    RightSpeed = device_get_tilt_y();
+}
+show_debug_message("Down = " + string(DownSpeed) + "Up = " + string(UpSpeed) + "Left = " + string(LeftSpeed) + "Right = " + string(RightSpeed));
+
+
+
+
+
+//device_get_tilt_x() * movementspeed
+
+//Up
+//if (device_get_tilt_x() * movementspeed &amp;&amp; place_free(x,y))
+//{
+//    x = device_get_tilt_x() * movementspeed;
+//}
+//Left
+//Down
+//Right
+
+//device_get_tilt_y LEFT &amp; RIGHT?
+//device_get_tilt_x UP &amp; DOWN?
+
+
 
 
 /*
