@@ -26,10 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>movementspeed = 30;
+
 UpSpeed = 0;
 DownSpeed = 0;
 LeftSpeed = 0;
 RightSpeed = 0;
+
+DownMovementSpeed = movementspeed;
+UpMovementSpeed = movementspeed;
+LeftMovementSpeed = movementspeed;
+RightMovementSpeed = movementspeed;
 </string>
           </argument>
         </arguments>
@@ -59,28 +65,18 @@ RightSpeed = 0;
 x = clamp(x,0,room_width);
 y = clamp(y,0,room_height);
 
-//if (place_meeting(x, y, obj_wall_vertical) || place_meeting(x, y, obj_wall_horizontal))
-//{
-//    place_free(x, y);
-//}
 
-//if (place_free(x + sprite_width / 2, y + sprite_height / 2))
-//{
-//    movementspeed;
-//}
-
-x += device_get_tilt_y()* movementspeed;
-y += device_get_tilt_x()* movementspeed;
-
-
+if place_meeting(x,y,obj_goal)
+{
+    instance_destroy();
+}
 
 //-1 to 1
-
-
 
 //DOWN
 if (device_get_tilt_x() &gt; 0)
 {
+    //DownSpeed = device_get_tilt_x() * movementspeed; //Hopefully don't need to go back to this working speed way
     DownSpeed = device_get_tilt_x();
     DownDirection = true;
     UpDirection = false;
@@ -110,82 +106,64 @@ show_debug_message("Down = " + string(DownSpeed) + "Up = " + string(UpSpeed) + "
 show_debug_message("Down = " + string(DownDirection) + "Up = " + string(UpDirection) + "Left = " + string(LeftDirection) + "Right = " + string(RightDirection));
 
 
-if place_meeting(x,y,obj_goal)
+if (DownDirection)
 {
-    instance_destroy();
+
+    //reset movement speed to allow to turn the other direction off a wall.
+    UpMovementSpeed = movementspeed;
+    
+    if (place_free(x,y + DownSpeed * DownMovementSpeed))
+    {
+        y += DownSpeed * DownMovementSpeed;
+    }
+    else
+    {
+        DownMovementSpeed = SlowDown(DownMovementSpeed);
+    }
 }
-
-
-//device_get_tilt_x() * movementspeed
-
-//Up
-//if (device_get_tilt_x() * movementspeed &amp;&amp; place_free(x,y))
-//{
-//    x = device_get_tilt_x() * movementspeed;
-//}
-//Left
-//Down
-//Right
-
-//device_get_tilt_y LEFT &amp; RIGHT?
-//device_get_tilt_x UP &amp; DOWN?
-
-
-
-
-/*
-
-if (keyboard_check(ord('W')) || keyboard_check(vk_up))
+if (UpDirection)
 {
-    obj_player.y += -1 * movementspeed;
-}
-
-if (keyboard_check(ord('A')) || keyboard_check(vk_left))
+    
+    //reset movement speed to allow to turn the other direction off a wall.
+    DownMovementSpeed = movementspeed;
+    
+    if (place_free(x,y + UpSpeed * UpMovementSpeed))
+    {
+        y += UpSpeed * UpMovementSpeed;
+    }
+    else
+    {
+        UpMovementSpeed = SlowDown(UpMovementSpeed);
+    }
+} 
+if (LeftDirection)
 {
-    obj_player.x += -1 * movementspeed;
+    //reset movement speed to allow to turn the other direction off a wall.
+    RightMovementSpeed = movementspeed;
+    
+    if (place_free(x + LeftSpeed * LeftMovementSpeed,y))
+    {
+        x += LeftSpeed * LeftMovementSpeed;
+    }
+    else
+    {
+        LeftMovementSpeed = SlowDown(LeftMovementSpeed);
+    }
 }
-
-if (keyboard_check(ord('S')) || keyboard_check(vk_down))
+if (RightDirection)
 {
-    obj_player.y += +1 * movementspeed;
+    //reset movement speed to allow to turn the other direction off a wall.
+    LeftMovementSpeed = movementspeed;
+    
+    if (place_free(x + RightSpeed * RightMovementSpeed,y))
+    {
+        x += RightSpeed * RightMovementSpeed;
+    }
+    else
+    {
+        RightMovementSpeed = SlowDown(RightMovementSpeed);
+    }
 }
-
-if (keyboard_check(ord('D')) || keyboard_check(vk_right))
-{
-    obj_player.x += +1 * movementspeed;
-}
-
-
-
-
-
-
-/*
-if (keyboard_check(ord('W')) || keyboard_check(vk_up))
-{
-    vspeed = -1;
-}
-
-if (keyboard_check(ord('A')) || keyboard_check(vk_left))
-{
-    hspeed = -1;
-}
-
-if (keyboard_check(ord('S')) || keyboard_check(vk_down))
-{
-    vspeed = +1;
-}
-
-if (keyboard_check(ord('D')) || keyboard_check(vk_right))
-{
-    hspeed = +1;
-}
-*/
-
-
-
-
-
 </string>
           </argument>
         </arguments>
