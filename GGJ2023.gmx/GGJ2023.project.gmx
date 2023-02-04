@@ -13,7 +13,14 @@
     <sprite>sprites\spr_wall_horizontal</sprite>
     <sprite>sprites\spr_wall_vertical</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\Y_Rot_25</background>
+    <background>background\Y_Rot__25</background>
+    <background>background\Top_Down</background>
+    <background>background\IMG_1102</background>
+    <background>background\X_Rot_25</background>
+    <background>background\X_Rot__25</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
