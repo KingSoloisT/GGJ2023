@@ -72,10 +72,7 @@ y = clamp(y,0,room_height);
 x += device_get_tilt_y()* movementspeed;
 y += device_get_tilt_x()* movementspeed;
 
-if place_meeting(x,y,obj_goal)
-{
-    instance_destroy();
-}
+
 
 //-1 to 1
 
@@ -85,26 +82,38 @@ if place_meeting(x,y,obj_goal)
 if (device_get_tilt_x() &gt; 0)
 {
     DownSpeed = device_get_tilt_x();
+    DownDirection = true;
+    UpDirection = false;
 }
 //UP
 if (device_get_tilt_x() &lt; 0)
 {
     UpSpeed = device_get_tilt_x();
+    DownDirection = false;
+    UpDirection = true;
 }
 //LEFT
 if (device_get_tilt_y() &lt; 0)
 {
     LeftSpeed = device_get_tilt_y();
+    LeftDirection = true;
+    RightDirection = false;
 }
 //RIGHT
 if (device_get_tilt_y() &gt; 0)
 {
     RightSpeed = device_get_tilt_y();
+    LeftDirection = false;
+    RightDirection = true;
 }
 show_debug_message("Down = " + string(DownSpeed) + "Up = " + string(UpSpeed) + "Left = " + string(LeftSpeed) + "Right = " + string(RightSpeed));
+show_debug_message("Down = " + string(DownDirection) + "Up = " + string(UpDirection) + "Left = " + string(LeftDirection) + "Right = " + string(RightDirection));
 
 
-
+if place_meeting(x,y,obj_goal)
+{
+    instance_destroy();
+}
 
 
 //device_get_tilt_x() * movementspeed
