@@ -202,6 +202,19 @@ Of an enflamed god');
 
 
 }
+
+if room = rm_credits
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(352,240,'Credits:
+Jarret Barton: Sound Design, Art
+Gregory Blomquist: Writing, Puzzle Design
+Cory Rupert: Game Design, Programming
+Richard Semenuik: Lead Programming');
+
+
+}
 </string>
           </argument>
         </arguments>

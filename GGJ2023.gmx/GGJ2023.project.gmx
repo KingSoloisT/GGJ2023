@@ -34,6 +34,7 @@
     <sprite>sprites\spr_wall_horizontal</sprite>
     <sprite>sprites\spr_wall_n</sprite>
     <sprite>sprites\spr_wall_n2</sprite>
+    <sprite>sprites\spr_tree</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_border_grass</background>
@@ -74,6 +75,7 @@
     <object>objects\obj_player2</object>
     <object>objects\obj_player2_old</object>
     <object>objects\obj_wall_east</object>
+    <object>objects\obj_tree</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
@@ -100,6 +102,7 @@
     <room>rooms\rm_story11</room>
     <room>rooms\rm_level11</room>
     <room>rooms\rm_story12</room>
+    <room>rooms\rm_credits</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
