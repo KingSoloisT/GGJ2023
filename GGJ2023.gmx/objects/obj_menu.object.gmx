@@ -25,13 +25,184 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(fnt_title);
-draw_set_colour(c_purple)
-draw_text(102,102,'Game Title');
-draw_text(77,202,'Tap to Start');
-draw_set_colour(c_white)
-draw_text(100,100,'Game Title');
-draw_text(75,200,'Tap to Start');
+            <string>if room = rm_title
+{
+    draw_set_font(fnt_title);
+    draw_set_colour(c_purple)
+    draw_text(102,102,'Game Title');
+    draw_text(77,202,'Tap to Start');
+    draw_set_colour(c_white)
+    draw_text(100,100,'Game Title');
+    draw_text(75,200,'Tap to Start');
+}
+
+if room = rm_story1
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Great tree shades us all
+The branch begins to bend... Crack!
+Life begins anew');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Great tree shades us all
+The branch begins to bend... Crack!
+Life begins anew');
+
+}
+/*
+if room = rm_story2
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'The seed lost its way
+Roll to where it all began
+And to find its roots');
+    draw_set_colour(c_white)
+    draw_text(400,205,'The seed lost its way
+Roll to where it all began
+And to find its roots');
+
+}
+
+if room = rm_story3
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Silent companion
+Droplet follows along--splash!
+Rain gives dry bark life');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Silent companion
+Droplet follows along--splash!
+Rain gives dry bark life');
+
+}
+
+if room = rm_story4
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Two are worlds apart
+To meet would mean death of one
+Droplet's destiny');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Two are worlds apart
+To meet would mean death of one
+Droplet's destiny');
+
+}
+
+if room = rm_story5
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Deep lines in the bark
+Rings of life return to form
+Nature was patient');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Deep lines in the bark
+Rings of life return to form
+Nature was patient');
+
+}
+
+if room = rm_story6
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'A box of carved wood
+Silently mocks the death
+Of the old great tree');
+    draw_set_colour(c_white)
+    draw_text(400,205,'A box of carved wood
+Silently mocks the death
+Of the old great tree');
+
+}
+
+if room = rm_story7
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Little seed fallen
+Always graceful in its way
+Finds a resting place');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Little seed fallen
+Always graceful in its way
+Finds a resting place');
+
+}
+
+if room = rm_story8
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'The riddle answered:
+A tree falls in a forest
+And deafens the soul');
+    draw_set_colour(c_white)
+    draw_text(400,205,'The riddle answered:
+A tree falls in a forest
+And deafens the soul');
+
+}
+
+if room = rm_story9
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Unstoppable force
+and immovable object
+Never-ending dance');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Unstoppable force
+and immovable object
+Never-ending dance');
+
+}
+
+if room = rm_story10
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Music of the spheres
+Set to time's marching tempo
+Sings on blades of grass');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Music of the spheres
+Set to time's marching tempo
+Sings on blades of grass');
+
+}
+
+if room = rm_story11
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Little seed bears fruit
+The burden of a long life
+And a good harvest');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Little seed bears fruit
+The burden of a long life
+And a good harvest');
+
+}
+
+if room = rm_story12
+{
+    draw_set_font(fnt_story);
+    draw_set_colour(c_purple)
+    draw_text(402,207,'Grow up to the sky
+Block out the eternal stares
+Of an enflamed god');
+    draw_set_colour(c_white)
+    draw_text(400,205,'Grow up to the sky
+Block out the eternal stares
+Of an enflamed god');
+
+}
 </string>
           </argument>
         </arguments>

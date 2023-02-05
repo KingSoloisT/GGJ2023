@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>if mouse_check_button_pressed(mb_left)
 {
-    room_goto(rm_level1);
+    if room = rm_title {room_goto(rm_story1);}
+    if room = rm_story1 {room_goto(rm_level1);}
 }
 
 

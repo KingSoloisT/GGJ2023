@@ -26,6 +26,7 @@
     <background>background\Top_Down</background>
     <background>background\IMG_1102</background>
     <background>background\bkg_border</background>
+    <background>background\bkg_story</background>
     <background>background\bkg_border_growth</background>
     <background>background\bkg_background</background>
     <background>background\bkg_border_flower</background>
@@ -40,6 +41,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_title</font>
+    <font>fonts\fnt_story</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -58,6 +60,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
+    <room>rooms\rm_story1</room>
     <room>rooms\rm_level1</room>
   </rooms>
   <help>
