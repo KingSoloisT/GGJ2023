@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>movementspeed = 12.5;
 
+DownDirection = false;
+UpDirection = false;
+LeftDirection = false;
+RightDirection = false;
+
 UpSpeed = 0;
 DownSpeed = 0;
 LeftSpeed = 0;
@@ -61,7 +66,6 @@ RightMovementSpeed = movementspeed;
             <string>//device_get_tilt_x()
 //device_get_tilt_y()
 //device_get_tilt_z()
-
 
 
 
@@ -162,24 +166,80 @@ if (RightDirection)
 if place_meeting(x,y,obj_wall_south)
 {
     image_angle = 0;
+    sprite_index = spr_player2;
 }
 
 if place_meeting(x,y,obj_wall_north)
 {
     image_angle = 180;
+    sprite_index = spr_player2;
 }
 
 if place_meeting(x,y,obj_wall_east)
 {
     image_angle = 90;
+    sprite_index = spr_player2;
 }
 
 if place_meeting(x,y,obj_wall_west)
 {
     image_angle = 270;
+    sprite_index = spr_player2;
 }
 
 
+
+if (place_meeting(x,y,obj_wall_south) &amp;&amp; place_meeting(x,y,obj_wall_east))
+{
+    image_angle = 0;
+    sprite_index = spr_player2_corner;
+    RightMovementSpeed = 0;
+    DownMovementSpeed = 0;
+}
+
+if (place_meeting(x,y,obj_wall_south) &amp;&amp; place_meeting(x,y,obj_wall_west))
+{
+    image_angle = 270;
+    sprite_index = spr_player2_corner;
+    DownMovementSpeed = 0;
+    LeftMovementSpeed = 0;
+}
+
+if (place_meeting(x,y,obj_wall_north) &amp;&amp; place_meeting(x,y,obj_wall_east))
+{
+    image_angle = 90;
+    sprite_index = spr_player2_corner;
+    UpMovementSpeed = 0;
+    RightMovementSpeed = 0;
+}
+
+if (place_meeting(x,y,obj_wall_north) &amp;&amp; place_meeting(x,y,obj_wall_west))
+{
+    image_angle = 180;
+    sprite_index = spr_player2_corner;
+    UpMovementSpeed = 0;
+    LeftMovementSpeed = 0;
+}
+
+if (!place_meeting(x,y,obj_wall_south))
+{
+    DownMovementSpeed = movementspeed;
+}
+
+if (!place_meeting(x,y,obj_wall_east))
+{
+    RightMovementSpeed = movementspeed;
+}
+
+if (!place_meeting(x,y,obj_wall_north))
+{
+    UpMovementSpeed = movementspeed;
+}
+
+if (!place_meeting(x,y,obj_wall_west))
+{
+    LeftMovementSpeed = movementspeed;
+}
 
 
 </string>

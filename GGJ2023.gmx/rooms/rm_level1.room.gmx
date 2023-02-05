@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1080</width>
   <height>600</height>
-  <vsnap>2</vsnap>
-  <hsnap>2</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -51,13 +51,13 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_player2" x="952" y="242" name="inst_D5D3C31E" locked="0" code="" scaleX="0.1104441806674" scaleY="0.0967056304216385" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player2" x="949" y="242" name="inst_D5D3C31E" locked="0" code="" scaleX="0.1104441806674" scaleY="0.0967056304216385" colour="4294967295" rotation="0"/>
     <instance objName="obj_goal" x="294" y="190" name="inst_C5F51449" locked="0" code="" scaleX="0.144117653369904" scaleY="0.233285918831825" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="554" y="270" name="inst_75F45787" locked="0" code="" scaleX="0.0738974958658218" scaleY="0.0637408569455147" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_south" x="473" y="540" name="inst_1CDEEBBC" locked="0" code="" scaleX="160" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_north" x="473" y="55" name="inst_F625C1B8" locked="0" code="" scaleX="160" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_east" x="950" y="250" name="inst_F1BE1914" locked="0" code="" scaleX="1" scaleY="96" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall_west" x="155" y="250" name="inst_5334213E" locked="0" code="" scaleX="1" scaleY="97" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_south" x="486" y="523" name="inst_1CDEEBBC" locked="0" code="" scaleX="160" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_north" x="483" y="61" name="inst_F625C1B8" locked="0" code="" scaleX="160" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_east" x="948" y="243" name="inst_F1BE1914" locked="0" code="" scaleX="1" scaleY="96" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_west" x="172" y="243" name="inst_5334213E" locked="0" code="" scaleX="1" scaleY="96" colour="4294967295" rotation="0"/>
     <instance objName="obj_goal2" x="172" y="112" name="inst_6F2C52F6" locked="0" code="" scaleX="0.140000000596046" scaleY="0.230000004172325" colour="4294967295" rotation="270"/>
   </instances>
   <tiles/>
