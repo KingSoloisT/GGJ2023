@@ -29,6 +29,19 @@
 {
     if room = rm_title {room_goto(rm_story1);}
     if room = rm_story1 {room_goto(rm_level1);}
+    }//remove later
+    /*
+    if room = rm_story2 {room_goto(rm_level2);}
+    if room = rm_story3 {room_goto(rm_level3);}
+    if room = rm_story4 {room_goto(rm_level4);}
+    if room = rm_story5 {room_goto(rm_level5);}
+    if room = rm_story6 {room_goto(rm_level6);}
+    if room = rm_story7 {room_goto(rm_level7);}
+    if room = rm_story8 {room_goto(rm_level8);}
+    if room = rm_story9 {room_goto(rm_level9);}
+    if room = rm_story10 {room_goto(rm_level10);}
+    if room = rm_story11 {room_goto(rm_level11);}
+    if room = rm_story12 {room_goto(rm_level12);}
 }
 
 

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>if room = rm_level1
 {
-    room_goto(rm_title);
+    room_goto_next();
 }
 </string>
           </argument>
@@ -98,7 +98,7 @@ if obj_player.RightDirection = true
 
 if !instance_exists(obj_player) &amp;&amp; !instance_exists(obj_player2) 
 {
-    draw_text(300,300,'WIN!!!');
+    //draw_text(300,300,'WIN!!!');
     if alarm[0] &lt;= -1 {alarm[0] = 30;}
 }
 

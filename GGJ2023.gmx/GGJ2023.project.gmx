@@ -65,6 +65,17 @@
     <room>rooms\rm_title</room>
     <room>rooms\rm_story1</room>
     <room>rooms\rm_level1</room>
+    <room>rooms\rm_story2</room>
+    <room>rooms\rm_story3</room>
+    <room>rooms\rm_story4</room>
+    <room>rooms\rm_story5</room>
+    <room>rooms\rm_story6</room>
+    <room>rooms\rm_story7</room>
+    <room>rooms\rm_story8</room>
+    <room>rooms\rm_story9</room>
+    <room>rooms\rm_story10</room>
+    <room>rooms\rm_story11</room>
+    <room>rooms\rm_story12</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
