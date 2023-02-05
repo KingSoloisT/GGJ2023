@@ -41,7 +41,7 @@
     if room = rm_story9 {room_goto(rm_level9);}
     if room = rm_story10 {room_goto(rm_level10);}
     if room = rm_story11 {room_goto(rm_level11);}
-    if room = rm_story12 {room_goto(rm_level12);}
+    if room = rm_story12 {room_goto(rm_title);}
 }
 
 

@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sfx_title</sound>
+    <sound>sound\sfx_full</sound>
+    <sound>sound\sfx_drop</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_goal_hole</sprite>
@@ -62,9 +66,9 @@
     <object>objects\obj_wall_west</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_title</room>
     <room>rooms\rm_story1</room>
-    <room>rooms\rm_level1</room>
     <room>rooms\rm_story2</room>
     <room>rooms\rm_story3</room>
     <room>rooms\rm_story4</room>

@@ -199,10 +199,23 @@ if (place_meeting(x,y,obj_wall_south) &amp;&amp; place_meeting(x,y,obj_wall_east
 
 if (place_meeting(x,y,obj_wall_south) &amp;&amp; place_meeting(x,y,obj_wall_west))
 {
+
+    //HERE
+    if (y &gt; obj_wall_west.y)
+    {
+        UpMovementSpeed = 0;
+        LeftMovementSpeed = 0;
+    }
+    if (y &lt; obj_wall_west.y)
+    {
+    
     image_angle = 270;
     sprite_index = spr_player2_corner;
+    
     DownMovementSpeed = 0;
     LeftMovementSpeed = 0;
+    }
+    //HERE
 }
 
 if (place_meeting(x,y,obj_wall_north) &amp;&amp; place_meeting(x,y,obj_wall_east))

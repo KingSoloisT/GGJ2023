@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>playsong = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -40,13 +63,18 @@ if room = rm_story1
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Great tree shades us all
+    draw_text(352,240,'Great tree shades us all
 The branch begins to bend... Crack!
 Life begins anew');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Great tree shades us all
-The branch begins to bend... Crack!
-Life begins anew');
+
+    if !audio_is_playing(sfx_drop)
+    {
+        playsong = true;
+    }
+    if playsong = true
+    {
+      if !audio_is_playing(sfx_full){audio_play_sound(sfx_full,1,true);}  
+    }
 
 }
 /*
@@ -57,10 +85,7 @@ if room = rm_story2
     draw_text(402,207,'The seed lost its way
 Roll to where it all began
 And to find its roots');
-    draw_set_colour(c_white)
-    draw_text(400,205,'The seed lost its way
-Roll to where it all began
-And to find its roots');
+
 
 }
 
@@ -71,10 +96,7 @@ if room = rm_story3
     draw_text(402,207,'Silent companion
 Droplet follows along--splash!
 Rain gives dry bark life');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Silent companion
-Droplet follows along--splash!
-Rain gives dry bark life');
+
 
 }
 
@@ -85,10 +107,7 @@ if room = rm_story4
     draw_text(402,207,'Two are worlds apart
 To meet would mean death of one
 Droplet's destiny');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Two are worlds apart
-To meet would mean death of one
-Droplet's destiny');
+
 
 }
 
@@ -97,10 +116,6 @@ if room = rm_story5
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
     draw_text(402,207,'Deep lines in the bark
-Rings of life return to form
-Nature was patient');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Deep lines in the bark
 Rings of life return to form
 Nature was patient');
 
@@ -113,10 +128,7 @@ if room = rm_story6
     draw_text(402,207,'A box of carved wood
 Silently mocks the death
 Of the old great tree');
-    draw_set_colour(c_white)
-    draw_text(400,205,'A box of carved wood
-Silently mocks the death
-Of the old great tree');
+
 
 }
 
@@ -127,10 +139,7 @@ if room = rm_story7
     draw_text(402,207,'Little seed fallen
 Always graceful in its way
 Finds a resting place');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Little seed fallen
-Always graceful in its way
-Finds a resting place');
+
 
 }
 
@@ -139,10 +148,6 @@ if room = rm_story8
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
     draw_text(402,207,'The riddle answered:
-A tree falls in a forest
-And deafens the soul');
-    draw_set_colour(c_white)
-    draw_text(400,205,'The riddle answered:
 A tree falls in a forest
 And deafens the soul');
 
@@ -155,10 +160,7 @@ if room = rm_story9
     draw_text(402,207,'Unstoppable force
 and immovable object
 Never-ending dance');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Unstoppable force
-and immovable object
-Never-ending dance');
+
 
 }
 
@@ -167,10 +169,6 @@ if room = rm_story10
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
     draw_text(402,207,'Music of the spheres
-Set to time's marching tempo
-Sings on blades of grass');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Music of the spheres
 Set to time's marching tempo
 Sings on blades of grass');
 
@@ -183,10 +181,7 @@ if room = rm_story11
     draw_text(402,207,'Little seed bears fruit
 The burden of a long life
 And a good harvest');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Little seed bears fruit
-The burden of a long life
-And a good harvest');
+
 
 }
 
@@ -197,10 +192,7 @@ if room = rm_story12
     draw_text(402,207,'Grow up to the sky
 Block out the eternal stares
 Of an enflamed god');
-    draw_set_colour(c_white)
-    draw_text(400,205,'Grow up to the sky
-Block out the eternal stares
-Of an enflamed god');
+
 
 }
 </string>
