@@ -191,47 +191,78 @@ if place_meeting(x,y,obj_wall_west)
 
 if (place_meeting(x,y,obj_wall_south) &amp;&amp; place_meeting(x,y,obj_wall_east))
 {
-    image_angle = 0;
-    sprite_index = spr_player2_corner;
-    RightMovementSpeed = 0;
-    DownMovementSpeed = 0;
+
+
+    if (y &lt; obj_wall_south.y)
+    {
+        RightMovementSpeed = 0;
+        UpMovementSpeed = 0;
+    }
+
+    if (y &gt; obj_wall_south.y)
+    {
+        image_angle = 0;
+        sprite_index = spr_player2_corner;
+        RightMovementSpeed = 0;
+        DownMovementSpeed = 0;
+    }
 }
 
 if (place_meeting(x,y,obj_wall_south) &amp;&amp; place_meeting(x,y,obj_wall_west))
 {
 
-    //HERE
     if (y &gt; obj_wall_west.y)
     {
         UpMovementSpeed = 0;
-        LeftMovementSpeed = 0;
+        RightMovementSpeed = 0;
     }
+    
     if (y &lt; obj_wall_west.y)
     {
     
-    image_angle = 270;
-    sprite_index = spr_player2_corner;
-    
-    DownMovementSpeed = 0;
-    LeftMovementSpeed = 0;
+        image_angle = 270;
+        sprite_index = spr_player2_corner;
+        
+        DownMovementSpeed = 0;
+        LeftMovementSpeed = 0;
     }
-    //HERE
 }
 
 if (place_meeting(x,y,obj_wall_north) &amp;&amp; place_meeting(x,y,obj_wall_east))
 {
-    image_angle = 90;
-    sprite_index = spr_player2_corner;
-    UpMovementSpeed = 0;
-    RightMovementSpeed = 0;
+
+    if (y &lt; obj_wall_east.y)
+    {
+        DownMovementSpeed = 0;
+        RightMovementSpeed = 0;
+    }
+    
+    if (y &gt; obj_wall_east.y)
+    {
+        image_angle = 90;
+        sprite_index = spr_player2_corner;
+        
+        UpMovementSpeed = 0;
+        RightMovementSpeed = 0;
+    }
 }
 
 if (place_meeting(x,y,obj_wall_north) &amp;&amp; place_meeting(x,y,obj_wall_west))
 {
-    image_angle = 180;
-    sprite_index = spr_player2_corner;
-    UpMovementSpeed = 0;
-    LeftMovementSpeed = 0;
+
+    if (y &lt; obj_wall_north.y)
+    {
+        UpMovementSpeed = 0;
+        LeftMovementSpeed = 0;
+    }
+
+    if (y &gt; obj_wall_north.y)
+    {
+        image_angle = 180;
+        sprite_index = spr_player2_corner;
+        UpMovementSpeed = 0;
+        LeftMovementSpeed = 0;
+    }
 }
 
 if (!place_meeting(x,y,obj_wall_south))

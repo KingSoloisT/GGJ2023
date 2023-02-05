@@ -54,10 +54,16 @@
     <instance objName="obj_player2" x="248" y="543" name="inst_D5D3C31E" locked="0" code="" scaleX="0.1104441806674" scaleY="0.0967056304216385" colour="4294967295" rotation="0"/>
     <instance objName="obj_goal" x="294" y="190" name="inst_C5F51449" locked="0" code="" scaleX="0.144117653369904" scaleY="0.233285918831825" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="761" y="152" name="inst_75F45787" locked="0" code="" scaleX="0.0738974958658218" scaleY="0.0637408569455147" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_west" x="596" y="414" name="inst_0CE9FAC6" locked="0" code="" scaleX="0.300000011920929" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_east" x="571" y="414" name="inst_A77B8421" locked="0" code="" scaleX="0.300000011920929" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_south" x="556" y="541" name="inst_2EDF7FF0" locked="0" code="visible = false;&#xA;" scaleX="0.600000023841858" scaleY="0.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_south" x="583" y="287" name="inst_6AD54C73" locked="0" code="" scaleX="0.0350000001490116" scaleY="0.100000001490116" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_south" x="299" y="292" name="inst_65457C71" locked="0" code="" scaleX="0.200000002980232" scaleY="0.300000011920929" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_north" x="299" y="316" name="inst_91C310B4" locked="0" code="" scaleX="0.200000002980232" scaleY="0.300000011920929" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_north" x="552" y="50" name="inst_5653451A" locked="0" code="visible = false;&#xA;" scaleX="0.600000023841858" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_east" x="951" y="298" name="inst_333330BC" locked="0" code="visible = false;&#xA;" scaleX="0.200000002980232" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall_west" x="161" y="295" name="inst_F76C14E6" locked="0" code="visible = false;&#xA;" scaleX="0.200000002980232" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall_west" x="424" y="304" name="inst_DF5EF07D" locked="0" code="" scaleX="0.100000001490116" scaleY="0.0350000001490116" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
