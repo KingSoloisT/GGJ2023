@@ -52,11 +52,15 @@
 {
     draw_set_font(fnt_title);
     draw_set_colour(c_purple)
-    draw_text(102,102,'Game Title');
-    draw_text(77,202,'Tap to Start');
+    draw_text(102,102,'The Seed 
+and the
+Droplet');
+    draw_text(767,502,'Tap to Start');
     draw_set_colour(c_white)
-    draw_text(100,100,'Game Title');
-    draw_text(75,200,'Tap to Start');
+    draw_text(100,100,'The Seed 
+and the
+Droplet');
+    draw_text(765,500,'Tap to Start');
 }
 
 if room = rm_story1
