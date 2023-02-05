@@ -8,6 +8,7 @@
     <sound>sound\sfx_title</sound>
     <sound>sound\sfx_full</sound>
     <sound>sound\sfx_drop</sound>
+    <sound>sound\sfx_bloop</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
