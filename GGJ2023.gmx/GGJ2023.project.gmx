@@ -18,7 +18,10 @@
     <sprite>sprites\spr_wall_east</sprite>
     <sprite>sprites\spr_wall_west</sprite>
     <sprite>sprites\spr_wall_vertical</sprite>
-    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_wall_n</sprite>
+    <sprite>sprites\spr_wall_e</sprite>
+    <sprite>sprites\spr_wall_w</sprite>
+    <sprite>sprites\spr_wall_s</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Y_Rot_25</background>
