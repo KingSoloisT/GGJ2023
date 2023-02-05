@@ -22,10 +22,11 @@
     <sprite>sprites\spr_wall_east</sprite>
     <sprite>sprites\spr_wall_west</sprite>
     <sprite>sprites\spr_wall_vertical</sprite>
-    <sprite>sprites\spr_wall_n</sprite>
+    <sprite>sprites\spr_wall_n2</sprite>
     <sprite>sprites\spr_wall_e</sprite>
     <sprite>sprites\spr_wall_w</sprite>
     <sprite>sprites\spr_wall_s</sprite>
+    <sprite>sprites\spr_wall_n</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Y_Rot_25</background>
@@ -66,11 +67,13 @@
     <object>objects\obj_wall_west</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_level1</room>
+    <room>rooms\rm_level2</room>
     <room>rooms\rm_title</room>
     <room>rooms\rm_story1</room>
     <room>rooms\rm_story2</room>
     <room>rooms\rm_story3</room>
+    <room>rooms\rm_level3</room>
+    <room>rooms\rm_level4</room>
     <room>rooms\rm_story4</room>
     <room>rooms\rm_story5</room>
     <room>rooms\rm_story6</room>
