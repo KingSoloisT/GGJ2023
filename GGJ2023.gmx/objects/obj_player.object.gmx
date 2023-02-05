@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movementspeed = 30;
+            <string>movementspeed = 15;
+
+DownDirection = false;
+UpDirection = false;
+LeftDirection = false;
+RightDirection = false;
 
 UpSpeed = 0;
 DownSpeed = 0;

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movementspeed = 25;
+            <string>movementspeed = 12.5;
 
 UpSpeed = 0;
 DownSpeed = 0;
@@ -68,7 +68,6 @@ RightMovementSpeed = movementspeed;
 //DOWN
 if (device_get_tilt_x() &gt; 0)
 {
-    //DownSpeed = device_get_tilt_x() * movementspeed; //Hopefully don't need to go back to this working speed way
     DownSpeed = device_get_tilt_x();
     DownDirection = true;
     UpDirection = false;
@@ -96,9 +95,8 @@ if (device_get_tilt_y() &gt; 0)
 }
 
 
-
-x = clamp(x, sprite_width, room_width - sprite_width);
-y = clamp(y, sprite_height, room_height - sprite_height);
+//x = clamp(x, sprite_width / 2, room_width - sprite_width / 2);
+//y = clamp(y, sprite_height / 2, room_height - sprite_height / 2);
 
 
 if place_meeting(x,y,obj_goal2)
@@ -107,117 +105,58 @@ if place_meeting(x,y,obj_goal2)
 }
 
 
-/*
-if place_meeting(x,y,obj_wall_horizontal)
-{
-    x += device_get_tilt_y()* movementspeed;
-}
-
-if place_meeting(x,y,obj_wall_vertical)
-{
-    y += device_get_tilt_x()* movementspeed; 
-}
-*/
-
-
 if (DownDirection)
 {
-
-    //if (place_meeting(x,y,obj_wall_horizontal))
-    //{
-        //x += device_get_tilt_y()* movementspeed;
-    //}
     
-    if (place_meeting(x,y + DownSpeed * DownMovementSpeed, obj_wall_vertical))
+    if (place_meeting(x,y + DownSpeed * DownMovementSpeed, obj_wall_east))
+    {
+        y += DownSpeed * DownMovementSpeed;
+        
+    }
+    else if (place_meeting(x,y + DownSpeed * DownMovementSpeed, obj_wall_west))
     {
         y += DownSpeed * DownMovementSpeed;
     }
-    
-    
-    
-    //reset movement speed to allow to turn the other direction off a wall.
-    /*
-    UpMovementSpeed = movementspeed;
-    
-    if (place_free(x,y + DownSpeed * DownMovementSpeed))
-    {
-        y += DownSpeed * DownMovementSpeed;
-    }
-    else
-    {
-        DownMovementSpeed = SlowDown(DownMovementSpeed);
-    }
-    */
 }
 
 
 if (UpDirection)
 {
-
-    if (place_meeting(x,y + UpSpeed * UpMovementSpeed, obj_wall_vertical))
-    {
-        y += UpSpeed * UpMovementSpeed;
-    }
-
-    /*
-    //reset movement speed to allow to turn the other direction off a wall.
-    DownMovementSpeed = movementspeed;
     
-    if (place_free(x,y + UpSpeed * UpMovementSpeed))
+    if (place_meeting(x,y + UpSpeed * UpMovementSpeed, obj_wall_east))
     {
         y += UpSpeed * UpMovementSpeed;
     }
-    else
+    else if (place_meeting(x,y + UpSpeed * UpMovementSpeed, obj_wall_west))
     {
-        UpMovementSpeed = SlowDown(UpMovementSpeed);
+        y += UpSpeed * UpMovementSpeed;
     }
-    */
 }
 
 if (LeftDirection)
-{
+{   
 
-    if (place_meeting(x + LeftSpeed * LeftMovementSpeed,y, obj_wall_horizontal))
+    if (place_meeting(x + LeftSpeed * LeftMovementSpeed,y, obj_wall_north))
     {
         x += LeftSpeed * LeftMovementSpeed;
     }
-
-    /*
-    //reset movement speed to allow to turn the other direction off a wall.
-    RightMovementSpeed = movementspeed;
-    
-    if (place_free(x + LeftSpeed * LeftMovementSpeed,y))
+    else if (place_meeting(x + LeftSpeed * LeftMovementSpeed,y, obj_wall_south))
     {
         x += LeftSpeed * LeftMovementSpeed;
     }
-    else
-    {
-        LeftMovementSpeed = SlowDown(LeftMovementSpeed);
-    }
-    */
 }
 
 if (RightDirection)
 {
-
-    if (place_meeting(x + RightSpeed * RightMovementSpeed,y, obj_wall_horizontal))
-    {
-        x += RightSpeed * RightMovementSpeed;
-    }
-
-/*
-    //reset movement speed to allow to turn the other direction off a wall.
-    LeftMovementSpeed = movementspeed;
     
-    if (place_free(x + RightSpeed * RightMovementSpeed,y))
+    if (place_meeting(x + RightSpeed * RightMovementSpeed,y, obj_wall_north))
     {
         x += RightSpeed * RightMovementSpeed;
     }
-    else
+    else if (place_meeting(x + RightSpeed * RightMovementSpeed,y, obj_wall_south))
     {
-        RightMovementSpeed = SlowDown(RightMovementSpeed);
+        x += RightSpeed * RightMovementSpeed;
     }
-    */
 }
 
 
