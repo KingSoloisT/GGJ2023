@@ -75,9 +75,12 @@ Life begins anew');
     {
         playsong = true;
     }
-    if playsong = true
+    if (playsong == true)
     {
-      if !audio_is_playing(sfx_full){audio_play_sound(sfx_full,1,true);}  
+      if (!audio_is_playing(sfx_full))
+      {
+        audio_play_sound(sfx_full,1,true);
+      }  
     }
 
 }

@@ -28,7 +28,10 @@
             <string>if mouse_check_button_pressed(mb_left)
 {
     if room = rm_title {room_goto(rm_story1);}
-    if room = rm_story1 {room_goto(rm_level1);}
+    if ((room = rm_story1) &amp;&amp; (obj_menu.playsong == true))
+    {
+        room_goto(rm_level1);
+    }
     if room = rm_story2 {room_goto(rm_level2);}
     if room = rm_story3 {room_goto(rm_level3);}
     if room = rm_story4 {room_goto(rm_level4);}

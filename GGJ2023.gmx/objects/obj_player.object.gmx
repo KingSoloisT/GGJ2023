@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>movementspeed = 15;
+volumeknock = 0.1;
 
 DownDirection = false;
 UpDirection = false;
@@ -138,6 +139,12 @@ if (DownDirection)
     else
     {
         DownMovementSpeed = SlowDown(DownMovementSpeed);
+        
+        if (!audio_is_playing(sfx_knock))
+        {
+            audio_sound_gain(sfx_knock, volumeknock, 0);
+            audio_play_sound(sfx_knock,1,false);
+        }
     }
     
     
@@ -161,6 +168,12 @@ if (UpDirection)
     else
     {
         UpMovementSpeed = SlowDown(UpMovementSpeed);
+        
+        if (!audio_is_playing(sfx_knock))
+        {
+            audio_sound_gain(sfx_knock, volumeknock, 0);
+            audio_play_sound(sfx_knock,1,false);
+        }
     }
 } 
 if (LeftDirection)
@@ -181,6 +194,12 @@ if (LeftDirection)
     else
     {
         LeftMovementSpeed = SlowDown(LeftMovementSpeed);
+        
+        if (!audio_is_playing(sfx_knock))
+        {
+            audio_sound_gain(sfx_knock, volumeknock, 0);
+            audio_play_sound(sfx_knock,1,false);
+        }
     }
 }
 if (RightDirection)
@@ -201,6 +220,12 @@ if (RightDirection)
     else
     {
         RightMovementSpeed = SlowDown(RightMovementSpeed);
+        
+        if (!audio_is_playing(sfx_knock))
+        {
+            audio_sound_gain(sfx_knock, volumeknock, 0);
+            audio_play_sound(sfx_knock,1,false);
+        }
     }
 }
 </string>
