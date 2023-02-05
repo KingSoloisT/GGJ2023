@@ -81,12 +81,12 @@ Life begins anew');
     }
 
 }
-/*
+
 if room = rm_story2
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'The seed lost its way
+    draw_text(352,240,'The seed lost its way
 Roll to where it all began
 And to find its roots');
 
@@ -97,7 +97,7 @@ if room = rm_story3
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Silent companion
+    draw_text(352,240,'Silent companion
 Droplet follows along--splash!
 Rain gives dry bark life');
 
@@ -108,9 +108,9 @@ if room = rm_story4
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Two are worlds apart
+    draw_text(352,240,'Two are worlds apart
 To meet would mean death of one
-Droplet's destiny');
+Droplet fade away');
 
 
 }
@@ -119,7 +119,7 @@ if room = rm_story5
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Deep lines in the bark
+    draw_text(352,240,'Deep lines in the bark
 Rings of life return to form
 Nature was patient');
 
@@ -129,7 +129,7 @@ if room = rm_story6
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'A box of carved wood
+    draw_text(352,240,'A box of carved wood
 Silently mocks the death
 Of the old great tree');
 
@@ -140,7 +140,7 @@ if room = rm_story7
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Little seed fallen
+    draw_text(352,240,'Little seed fallen
 Always graceful in its way
 Finds a resting place');
 
@@ -151,7 +151,7 @@ if room = rm_story8
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'The riddle answered:
+    draw_text(352,240,'The riddle answered:
 A tree falls in a forest
 And deafens the soul');
 
@@ -161,7 +161,7 @@ if room = rm_story9
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Unstoppable force
+    draw_text(352,240,'Unstoppable force
 and immovable object
 Never-ending dance');
 
@@ -172,8 +172,8 @@ if room = rm_story10
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Music of the spheres
-Set to time's marching tempo
+    draw_text(352,240,'Music of the spheres
+Set to the tempo of time
 Sings on blades of grass');
 
 }
@@ -182,7 +182,7 @@ if room = rm_story11
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Little seed bears fruit
+    draw_text(352,240,'Little seed bears fruit
 The burden of a long life
 And a good harvest');
 
@@ -193,7 +193,7 @@ if room = rm_story12
 {
     draw_set_font(fnt_story);
     draw_set_colour(c_purple)
-    draw_text(402,207,'Grow up to the sky
+    draw_text(352,240,'Grow up to the sky
 Block out the eternal stares
 Of an enflamed god');
 

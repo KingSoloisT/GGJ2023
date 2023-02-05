@@ -3,7 +3,7 @@
   <spriteName>spr_goal_hole</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,10 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = rm_level1
-{
-    room_goto_next();
-}
+            <string>room_goto_next();
+
 </string>
           </argument>
         </arguments>

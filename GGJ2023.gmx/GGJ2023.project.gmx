@@ -21,8 +21,10 @@
     <sprite>sprites\spr_wall_west</sprite>
     <sprite>sprites\spr_goal</sprite>
     <sprite>sprites\spr_goal_hole</sprite>
+    <sprite>sprites\spr_goal_hole2</sprite>
     <sprite>sprites\spr_goal2</sprite>
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player2_new</sprite>
     <sprite>sprites\spr_player2</sprite>
     <sprite>sprites\spr_player2_corner</sprite>
     <sprite>sprites\spr_player2_corner_outer</sprite>
@@ -70,6 +72,7 @@
     <object>objects\obj_mouse</object>
     <object>objects\obj_player</object>
     <object>objects\obj_player2</object>
+    <object>objects\obj_player2_old</object>
     <object>objects\obj_wall_east</object>
   </objects>
   <rooms name="rooms">
@@ -77,15 +80,25 @@
     <room>rooms\rm_story1</room>
     <room>rooms\rm_level1</room>
     <room>rooms\rm_story2</room>
+    <room>rooms\rm_level2</room>
     <room>rooms\rm_story3</room>
+    <room>rooms\rm_level3</room>
     <room>rooms\rm_story4</room>
+    <room>rooms\rm_level4</room>
     <room>rooms\rm_story5</room>
+    <room>rooms\rm_level5</room>
     <room>rooms\rm_story6</room>
+    <room>rooms\rm_level6</room>
     <room>rooms\rm_story7</room>
+    <room>rooms\rm_level7</room>
     <room>rooms\rm_story8</room>
+    <room>rooms\rm_level8</room>
     <room>rooms\rm_story9</room>
+    <room>rooms\rm_level9</room>
     <room>rooms\rm_story10</room>
+    <room>rooms\rm_level10</room>
     <room>rooms\rm_story11</room>
+    <room>rooms\rm_level11</room>
     <room>rooms\rm_story12</room>
     <room>rooms\rm_test</room>
   </rooms>

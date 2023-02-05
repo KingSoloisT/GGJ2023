@@ -67,12 +67,18 @@ RightMovementSpeed = movementspeed;
 //device_get_tilt_y()
 //device_get_tilt_z()
 
+//if (place_meeting(x, y, obj_player2)
+//{
+    
+//}
+
 x = clamp(x,0,room_width);
 y = clamp(y,0,room_height);
 
 
 if place_meeting(x,y,obj_goal)
 {
+    audio_play_sound(sfx_seed,1,false);
     instance_destroy();
 }
 
