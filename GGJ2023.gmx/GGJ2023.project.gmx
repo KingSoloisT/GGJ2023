@@ -13,6 +13,7 @@
     <sprite>sprites\spr_player2</sprite>
     <sprite>sprites\spr_wall_horizontal</sprite>
     <sprite>sprites\spr_wall_vertical</sprite>
+    <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Y_Rot_25</background>
@@ -21,6 +22,7 @@
     <background>background\IMG_1102</background>
     <background>background\bkg_border</background>
     <background>background\bkg_border_growth</background>
+    <background>background\bkg_background</background>
     <background>background\bkg_border_flower</background>
     <background>background\bkg_border_grass</background>
     <background>background\bkg_grass</background>
@@ -31,6 +33,9 @@
   <scripts name="scripts">
     <script>scripts\SlowDown.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_title</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_player2</object>

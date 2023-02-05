@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1080</width>
   <height>600</height>
-  <vsnap>30</vsnap>
-  <hsnap>30</hsnap>
+  <vsnap>5</vsnap>
+  <hsnap>5</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -31,7 +31,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bkg_background" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="-1"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -52,8 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_mouse" x="150" y="180" name="inst_C92ABE1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_menu" x="570" y="450" name="inst_1DE78A1B" locked="0" code="" scaleX="19.1379318237305" scaleY="1.55172419548035" colour="4294967295" rotation="0"/>
-    <instance objName="obj_level_select" x="570" y="540" name="inst_A552D939" locked="0" code="" scaleX="18" scaleY="2.09999990463257" colour="4294967295" rotation="0"/>
+    <instance objName="obj_menu" x="575" y="515" name="inst_1DE78A1B" locked="0" code="" scaleX="9.80000019073486" scaleY="4.63333320617676" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
