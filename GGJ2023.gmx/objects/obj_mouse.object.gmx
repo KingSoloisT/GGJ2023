@@ -27,14 +27,10 @@
             <kind>1</kind>
             <string>if mouse_check_button_pressed(mb_left)
 {
-    x = mouse_x;
-    y = mouse_y;
-}
-
-if place_meeting(x,y,obj_menu)
-{
     room_goto(rm_level1);
 }
+
+
 </string>
           </argument>
         </arguments>

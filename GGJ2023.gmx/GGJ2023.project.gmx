@@ -11,6 +11,7 @@
     <sprite>sprites\spr_goal</sprite>
     <sprite>sprites\spr_goal2</sprite>
     <sprite>sprites\spr_player2</sprite>
+    <sprite>sprites\spr_player2_corner</sprite>
     <sprite>sprites\spr_wall_horizontal</sprite>
     <sprite>sprites\spr_wall_north</sprite>
     <sprite>sprites\spr_wall_south</sprite>

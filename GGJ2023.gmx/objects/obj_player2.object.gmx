@@ -159,6 +159,27 @@ if (RightDirection)
     }
 }
 
+if place_meeting(x,y,obj_wall_south)
+{
+    image_angle = 0;
+}
+
+if place_meeting(x,y,obj_wall_north)
+{
+    image_angle = 180;
+}
+
+if place_meeting(x,y,obj_wall_east)
+{
+    image_angle = 90;
+}
+
+if place_meeting(x,y,obj_wall_west)
+{
+    image_angle = 270;
+}
+
+
 
 
 </string>
