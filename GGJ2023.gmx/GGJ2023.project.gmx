@@ -12,13 +12,83 @@
     <sound>sound\sfx_knock</sound>
     <sound>sound\sfx_seed</sound>
   </sounds>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_wall_north</sprite>
+    <sprite>sprites\spr_wall_s</sprite>
+    <sprite>sprites\spr_wall_south</sprite>
+    <sprite>sprites\spr_wall_vertical</sprite>
+    <sprite>sprites\spr_wall_w</sprite>
+    <sprite>sprites\spr_wall_west</sprite>
+    <sprite>sprites\spr_goal</sprite>
+    <sprite>sprites\spr_goal_hole</sprite>
+    <sprite>sprites\spr_goal2</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player2</sprite>
+    <sprite>sprites\spr_player2_corner</sprite>
+    <sprite>sprites\spr_player2_corner_outer</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_wall_e</sprite>
+    <sprite>sprites\spr_wall_east</sprite>
+    <sprite>sprites\spr_wall_horizontal</sprite>
+    <sprite>sprites\spr_wall_n</sprite>
+    <sprite>sprites\spr_wall_n2</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bkg_border_grass</background>
+    <background>background\bkg_border_growth</background>
+    <background>background\bkg_grass</background>
+    <background>background\bkg_story</background>
+    <background>background\IMG_1102</background>
+    <background>background\Top_Down</background>
+    <background>background\X_Rot__25</background>
+    <background>background\X_Rot_25</background>
+    <background>background\Y_Rot__25</background>
+    <background>background\Y_Rot_25</background>
+    <background>background\bkg_background</background>
+    <background>background\bkg_border</background>
+    <background>background\bkg_border_flower</background>
+  </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
-  <fonts name="fonts"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <scripts name="scripts">
+    <script>scripts\SlowDownSpeed.gml</script>
+    <script>scripts\SlowDown.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_story</font>
+    <font>fonts\fnt_title</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obj_wall_horizontal</object>
+    <object>objects\obj_wall_north</object>
+    <object>objects\obj_wall_south</object>
+    <object>objects\obj_wall_vertical</object>
+    <object>objects\obj_wall_west</object>
+    <object>objects\obj_goal</object>
+    <object>objects\obj_goal2</object>
+    <object>objects\obj_level_select</object>
+    <object>objects\obj_menu</object>
+    <object>objects\obj_mouse</object>
+    <object>objects\obj_player</object>
+    <object>objects\obj_player2</object>
+    <object>objects\obj_wall_east</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_title</room>
+    <room>rooms\rm_story1</room>
+    <room>rooms\rm_level1</room>
+    <room>rooms\rm_story2</room>
+    <room>rooms\rm_story3</room>
+    <room>rooms\rm_story4</room>
+    <room>rooms\rm_story5</room>
+    <room>rooms\rm_story6</room>
+    <room>rooms\rm_story7</room>
+    <room>rooms\rm_story8</room>
+    <room>rooms\rm_story9</room>
+    <room>rooms\rm_story10</room>
+    <room>rooms\rm_story11</room>
+    <room>rooms\rm_story12</room>
+    <room>rooms\rm_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
